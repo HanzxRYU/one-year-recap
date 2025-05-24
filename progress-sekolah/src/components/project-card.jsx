@@ -1,55 +1,55 @@
-import { Link } from "react-router-dom";
+// src/components/ProjectCard.jsx
+import React from "react";
+import { Calendar, ClipboardList } from "lucide-react";
 import { motion } from "framer-motion";
 import ProgressBar from "./ProgressBar";
-import TagKategori from "./TagKategori";
+import CategoryIcon from "./categoryIcon";
 
-const ProjectCard = ({
-  id,
-  nama,
-  kategori,
-  jenis,
-  progress,
-  estimasiSelesai,
-  gambarUrl,
-}) => {
+export default function ProjectCard({ project }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4 }}
-      className="bg-white rounded-2xl shadow p-4 hover:shadow-lg cursor-pointer flex flex-col md:flex-row items-center md:items-start gap-4"
+      className="bg-white rounded-lg shadow-md p-4 flex flex-col"
+      whileHover={{
+        scale: 1.03,
+        boxShadow: "0 10px 20px rgba(59,130,246,0.3)",
+      }}
+      transition={{ type: "spring", stiffness: 300 }}
     >
-      {/* Gambar Thumbnail */}
-      <img
-        src={gambarUrl}
-        alt={`Thumbnail ${nama}`}
-        className="w-12 h-12 md:w-16 md:h-16 rounded-lg object-cover flex-shrink-0"
-      />
+      {/* Gambar */}
+      {project.gambarUrl && (
+        <img
+          src={project.gambarUrl}
+          alt={project.nama}
+          className="w-full h-36 object-cover rounded-md mb-4"
+        />
+      )}
 
-      {/* Info Konten */}
-      <div className="flex flex-col flex-1 w-full">
-        <div className="flex justify-between items-center">
-          <h3 className="text-lg font-semibold">{nama}</h3>
-          <TagKategori kategori={kategori} />
-        </div>
+      {/* Nama & Kategori */}
+      <h3 className="text-lg font-semibold mb-1 flex items-center">
+        {project.nama}
+      </h3>
+      <div className="flex items-center text-sm text-gray-600 mb-2">
+        <CategoryIcon kategori={project.kategori} />
+        <span>{project.kategori}</span>
+      </div>
 
-        <p className="text-sm text-gray-500 mt-1">{jenis}</p>
+      {/* Jenis Kegiatan */}
+      <p className="text-gray-700 mb-4 flex items-center">
+        <ClipboardList className="w-4 h-4 mr-1" />
+        {project.jenis}
+      </p>
 
-        <ProgressBar progress={progress} />
+      {/* Progress Bar */}
+      <ProgressBar progress={project.progress} />
 
-        <p className="text-xs text-gray-400 mt-2">
-          Estimasi selesai: {estimasiSelesai}
-        </p>
-
-        <Link
-          to={`/detail/${id}`}
-          className="mt-3 inline-block text-indigo-600 text-sm font-medium hover:underline"
-        >
-          Lihat Detail →
-        </Link>
+      {/* Progress Text & Estimasi */}
+      <div className="flex justify-between mt-2 text-sm text-gray-600">
+        <span>Progress: {project.progress}%</span>
+        <span className="flex items-center">
+          <Calendar className="w-4 h-4 mr-1" />
+          {project.estimasiSelesai}
+        </span>
       </div>
     </motion.div>
   );
-};
-
-export default ProjectCard;
+}
