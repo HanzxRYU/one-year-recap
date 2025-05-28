@@ -1,17 +1,13 @@
-// src/data/achievements.js
 export const achievements = [
-  // Achievement dari proyek Taekwondo
   {
     id: "a1",
     projectId: "p1",
-    title: "Latihan rutin setiap minggu",
+    title: "Latihan rutin taekwondo setiap minggu",
     date: "Januari - Mei 2025",
     description:
       "Mengikuti latihan rutin untuk meningkatkan teknik dan kekuatan.",
-    photoUrl: "",
+    photoUrl: "../public/taekwondo.jpg",
   },
-
-  // Achievement dari proyek Futsal
   {
     id: "a2",
     projectId: "p2",
@@ -19,10 +15,8 @@ export const achievements = [
     date: "Mei 2025",
     description:
       "Bergabung sebagai pemain inti dalam tim futsal divisi 3 sekolah.",
-    photoUrl: "",
+    photoUrl: "../public/ball.jpg",
   },
-
-  // Achievement personal / kegiatan OSIS dan event
   {
     id: "a3",
     projectId: "personal",
@@ -37,7 +31,7 @@ export const achievements = [
     title: "Ketua Panitia MUNFEST (Event Budaya)",
     date: "April 2025",
     description: "Mengorganisir acara budaya MUNFEST sebagai ketua panitia.",
-    photoUrl: "",
+    photoUrl: "../public/munfest.jpg",
   },
   {
     id: "a5",
@@ -47,8 +41,6 @@ export const achievements = [
     description: "Memimpin pelaksanaan acara Classmeet sebagai ketua panitia.",
     photoUrl: "",
   },
-
-  // Achievement sertifikat
   {
     id: "a6",
     projectId: "personal",
@@ -56,6 +48,7 @@ export const achievements = [
     date: "Maret 2025",
     description:
       "Menyelesaikan pembelajaran Front-End untuk pemula di Dicoding.",
-    photoUrl: "/images/sertifikat-dicoding.jpg",
+    photoUrl: "../public/dicoding.jpg",
   },
 ];
+

@@ -1,4 +1,3 @@
-// src/data/projects.js
 export const projects = [
   {
     id: "p1",
