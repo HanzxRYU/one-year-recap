@@ -28,7 +28,7 @@ export default function Achievement() {
               {/* Gambar */}
               {item.image && (
                 <img
-                  src={item.image}
+                  src={item.photoUrl}
                   alt={item.title}
                   className="w-full h-40 object-cover rounded-lg mb-3"
                 />

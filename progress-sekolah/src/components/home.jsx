@@ -87,7 +87,7 @@ export default function Home() {
       <motion.div className="flex flex-col items-center gap-6">
         {/* Hero Section */}
         <motion.img
-          src="../public/me.jpg"
+          src="./me.JPG"
           alt="Foto Pemilik"
           className="w-36 h-36 rounded-full shadow-lg border-4 border-[#C6B899] object-cover mt-2 mb-4"
           variants={imageVariants}
@@ -118,15 +118,16 @@ export default function Home() {
         </motion.p>
 
         {/* Link Section */}
-        <div className="flex gap-6">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-4">
           {[
             { to: "/achievement", label: "🎯 Lihat Pencapaian" },
             { to: "/skills", label: "📚 Cek Keterampilan Saya" },
+            { to: "/it", label: "💻 Proyek IT & Progres" }, // ✅ Ganti "/projects" jadi "/it"
           ].map((btn, i) => (
             <MotionLink
               key={btn.to}
               to={btn.to}
-              className="px-5 py-2 border border-transparent rounded-md text-sm font-semibold cursor-pointer text-[#5A574B] hover:bg-[#4B4534] hover:text-white transition-all duration-300 bg-transparent min-w-[140px] text-center shadow-sm"
+              className="px-5 py-2 border border-transparent rounded-md text-sm font-semibold cursor-pointer text-[#5A574B] hover:bg-[#4B4534] hover:text-white transition-all duration-300 bg-transparent min-w-[160px] text-center shadow-sm"
               custom={i}
               variants={buttonVariants}
               whileHover={{

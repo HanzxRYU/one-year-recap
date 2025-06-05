@@ -6,7 +6,7 @@ export const achievements = [
     date: "Januari - Mei 2025",
     description:
       "Mengikuti latihan rutin untuk meningkatkan teknik dan kekuatan.",
-    photoUrl: "../public/taekwondo.jpg",
+    photoUrl: "/taekwondo.jpg",
   },
   {
     id: "a2",
@@ -15,7 +15,7 @@ export const achievements = [
     date: "Mei 2025",
     description:
       "Bergabung sebagai pemain inti dalam tim futsal divisi 3 sekolah.",
-    photoUrl: "../public/ball.jpg",
+    photoUrl: "/ball.jpg",
   },
   {
     id: "a3",
@@ -23,7 +23,7 @@ export const achievements = [
     title: "Ketua OSIS Tahun 2025",
     date: "Januari - Desember 2025",
     description: "Menjadi ketua OSIS dan memimpin berbagai kegiatan sekolah.",
-    photoUrl: "",
+    photoUrl: "/leader.jpg",
   },
   {
     id: "a4",
@@ -31,7 +31,7 @@ export const achievements = [
     title: "Ketua Panitia MUNFEST (Event Budaya)",
     date: "April 2025",
     description: "Mengorganisir acara budaya MUNFEST sebagai ketua panitia.",
-    photoUrl: "../public/munfest.jpg",
+    photoUrl: "/munfest.JPG",
   },
   {
     id: "a5",
@@ -39,7 +39,7 @@ export const achievements = [
     title: "Ketua Panitia Classmeet 2025",
     date: "September 2025",
     description: "Memimpin pelaksanaan acara Classmeet sebagai ketua panitia.",
-    photoUrl: "",
+    photoUrl: "/leader.jpg",
   },
   {
     id: "a6",
@@ -48,7 +48,7 @@ export const achievements = [
     date: "Maret 2025",
     description:
       "Menyelesaikan pembelajaran Front-End untuk pemula di Dicoding.",
-    photoUrl: "../public/dicoding.jpg",
+    photoUrl: "/dicoding.jpg",
   },
 ];
 

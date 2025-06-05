@@ -35,7 +35,7 @@ export default function Detail() {
         {item.photoUrl && (
           <img
             src={item.photoUrl}
-            alt={item.title}
+            alt={item.date}
             className="rounded-xl max-w-xs w-full h-auto object-cover shadow-md mb-8 md:mb-0 md:flex-shrink-0"
             loading="lazy"
           />
